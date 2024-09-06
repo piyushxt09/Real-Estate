@@ -1,41 +1,105 @@
-body {
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+/* For WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 4px; /* Scrollbar width */
 }
 
-* {
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Optional: background of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(8, 61, 129); /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(5, 50, 109); /* Darken the scrollbar on hover */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin; /* Makes scrollbar thin */
+    scrollbar-color: rgb(8, 61, 129) #f1f1f1; /* Thumb color and track color */
+}
+
+
+:root{
+    --primary-color: rgb(8, 61, 129);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(8, 61, 129);
+}
+*{
     margin: 0;
     padding: 0;
 }
-
-:root {
-    --primary-color: #0097d5;
-}
-
-.container-fluid .LogoImage {
-    width: 150px;
-    height: 150px;
-}
-
-.container-fluid div {
+.navbar{
     display: flex;
     align-items: center;
-    gap: 40px;
-}
-
-.container-fluid div a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    font-size: 18px;
-
-    &:hover {
-        color: var(--primary-color);
-    }
-}
-d-flex button{
+    justify-content: space-between;
+    margin-top: -20px;
+    position: fixed;
+    height: 13vh;
+    width: 100%;
     background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    z-index: 2;
+}
+.Logo .LogoImage{
+    width: 150px;
+}
+.Logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Logo h2{
+   font-size: 21px;
+   color: white;
+   margin-top: 10px;
+   margin-left: -30px;
+   font-family: "Baskervville SC", serif;
+   font-weight: 400;
+   font-style: normal;
+}
+.Navbar{
+    display: flex;
+    gap: 50px;
+}
+.Navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+    font-size: 20px;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    &:hover{
+       background-color: white;
+       color: var(--primary-color);
+    }
+
+}
+.navbar button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-family: "SUSE", sans-serif;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    margin-right: 20px;
+    transition: 0.4s ease-in;
+    &:hover{
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
 }

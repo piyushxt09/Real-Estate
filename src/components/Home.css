@@ -1,0 +1,133 @@
+/* home page------------------------------------- */
+body{
+    overflow-x: hidden;
+}
+.homeBack {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    top: 130px;
+    padding: 10px;
+    overflow: hidden;
+    /* Ensures the ::before element doesn't overflow */
+}
+
+.homeBack::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/Images/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    /* Adjust the opacity here */
+    z-index: -1;
+    /* Keeps it behind the content */
+}
+
+.homeBack h1 {
+    color: white;
+}
+
+.headings {
+    max-width: auto;
+    width: 100%;
+    display: flex;
+    padding: 20px 100px;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.homeBack p {
+    color: rgb(255, 254, 236);
+}
+
+.headings button {
+    width: 12%;
+    border: 2px solid var(--primary-color);
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    transition: 0.3s;
+&:hover{
+    background-color: transparent;
+
+}
+}
+
+
+/* -----------------------projects------------------- */
+
+.Projects{
+    background-color: white;
+    margin-top: 100px;
+}
+.Projects h1{
+    font-size: 45px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--primary-color);
+}
+
+.projects-Appartment{
+    display: flex;
+    border-radius: 10px;
+}
+.projects-Appartment div{
+    width: 50%;
+}
+.projects-Appartment .image{
+  background-image: url('../assets/Images/projects.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  height: 400px;
+}
+.projects-Appartment .heading{
+    background-color: rgb(237, 247, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 100px;
+}
+.heading h1{
+    text-align: justify;
+    color: black;
+    font-size: 50px;
+}
+.heading h4{
+    font-size: 30px;
+}
+.heading p{
+    font-size: 20px;
+}
+.heading button{
+    border-radius: 20px;
+    font-size: 20px;
+    width: 20%;
+    padding: 10px;
+    color: whitesmoke;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    transition: 0.4s;
+
+    &:hover{
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+}

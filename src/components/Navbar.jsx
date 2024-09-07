@@ -33,10 +33,10 @@ const Navbar = () => {
                     <h2>Dream Homez</h2>
                 </div>
                 <div className={`Navbar ${isMobileMenuOpen ? 'open' : ''}`}>
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
+                    <Link to='/'><a href="#">Home</a></Link>
+                    <Link to='/about'> <a href="/about">About</a></Link>
                     <a href="#">Services</a>
-                    <a href="/ContactUs">Contact Us</a>
+                    <Link to='/ContactUs'> <a href="#">Contact Us</a></Link>
                 </div>
                 <div className='Buttons'>
                     <button className="schedule-btn">Schedule Visit</button>

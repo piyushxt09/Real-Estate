@@ -1,0 +1,69 @@
+.Footer .Upper{
+    display: flex;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    padding: 5px;
+}
+.Footer .Upper div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.Footer .Upper div i{
+    margin-top: 8px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+.Footer .Upper div p{
+    font-size: 20px;
+}
+
+.Footer .Middle{
+    display: flex;
+    justify-content: space-around;
+    color: whitesmoke;
+}
+.Footer .Middle h1{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.Footer .Middle input{
+    width: 400px;
+    height: 40px;
+    padding: 4px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid white;
+}
+.Footer .Middle button{
+    padding: 6px;
+    outline: none;
+    border: 2px solid white;
+    background-color: white;
+    transition: 0.4s;
+
+    &:hover{
+        background-color: transparent;
+        color: white;
+    }
+}
+.Footer .Middle h6{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.Footer .Middle p{
+    cursor: pointer;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.Footer .Middle div div{
+    display: flex;
+    gap: 10px;
+}

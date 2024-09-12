@@ -6,17 +6,17 @@ const Footer = () => {
         <div className='Footer'>
             <div className='Upper'>
                 <div>
-                    <i class="fa-solid fa-phone"></i>
+                    <i className="fa-solid fa-phone"></i>
                     <p>(+00) 1234 5678</p>
                 </div>
                 <div>
-                    <i class="fa-solid fa-envelope"></i>
+                    <i className="fa-solid fa-envelope"></i>
                     <p>info@gmail.com </p></div>
                 <div>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>  Robert Robertson, 1234 NW Bobcat Lane, St. Robert, MO 65584-5678 </p>
+                    <i className="fa-solid fa-location-dot"></i>
+                    <p className='Location'>  Robert Robertson, 1234 NW Bobcat Lane, St. Robert, MO 65584-5678 </p>
                 </div>
-            </div>\
+            </div>
             <div className="Middle">
                 <div>
                     <h1>About</h1>
@@ -38,7 +38,7 @@ const Footer = () => {
                     <p>Newsletter</p>
                     <p>Privacy Policy</p>
                 </div>
-                <div>
+                <div className='InputField'>
                     <h1>Subscribe</h1>
                     <div>
                         <input type="text" placeholder='Enter email address' /><button>Subscribe</button>

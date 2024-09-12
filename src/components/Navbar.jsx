@@ -7,19 +7,13 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    // Toggle Mobile Menu
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    // Handle Scroll Event to adjust Navbar height
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            setIsScrolled(window.scrollY > 0);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -33,16 +27,21 @@ const Navbar = () => {
                     <h2>Dream Homez</h2>
                 </div>
                 <div className={`Navbar ${isMobileMenuOpen ? 'open' : ''}`}>
+                    {isMobileMenuOpen && (
+                        <button className="close-btn" onClick={toggleMobileMenu}>X</button>
+                    )}
                     <Link to='/'><a href="#">Home</a></Link>
-                    <Link to='/about'> <a href="/about">About</a></Link>
-                    <a href="#">Services</a>
-                    <Link to='/ContactUs'> <a href="#">Contact Us</a></Link>
+                    <Link to='/about'><a href="/about">About</a></Link>
+                    <Link to='/Services'> <a href="#">Services</a></Link>
+                    <Link to='/ContactUs'><a href="#">Contact Us</a></Link>
                 </div>
                 <div className='Buttons'>
-                    <button className="schedule-btn">Schedule Visit</button>
-                    <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
-                        {isMobileMenuOpen ? 'X' : '☰'}
-                    </button>
+                    <Link to='/Schedule'><button className="schedule-btn">Schedule A Visit</button></Link>
+                    {!isMobileMenuOpen && (
+                        <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+                            {isMobileMenuOpen ? 'X' : '☰'}
+                        </button>
+                    )}
                 </div>
             </nav>
         </>

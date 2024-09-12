@@ -34,22 +34,19 @@ body {
 
 .headings {
     width: 100vw;
-    /* Full width */
+    margin-left: 100px;
     display: flex;
     padding: 20px;
     flex-direction: column;
     justify-content: center;
     height: 100%;
     text-align: justify;
-    /* Justify text within the headings */
 }
 
 .homeBack p {
     color: rgb(255, 254, 236);
     width: 100vw;
-    /* Full width */
     text-align: justify;
-    /* Ensure paragraph text is justified */
 }
 
 /* Button Styles */
@@ -75,6 +72,7 @@ body {
 .Projects {
     background-color: white;
     margin-top: 100px;
+    padding-bottom: 80px;
 }
 
 .Projects h1 {
@@ -92,7 +90,6 @@ body {
     border-radius: 10px;
     justify-content: space-between;
     width: 100vw;
-    /* Full width */
 }
 
 .projects-Appartment div {
@@ -115,12 +112,10 @@ body {
     justify-content: center;
     padding: 10px 100px;
     text-align: justify;
-    /* Justify text */
 }
 
 .heading h1 {
     text-align: justify;
-    /* Justify heading */
     color: black;
     font-size: 50px;
 }
@@ -132,7 +127,6 @@ body {
 .heading p {
     font-size: 20px;
     text-align: justify;
-    /* Justify paragraph text */
 }
 
 /* Button in Projects Section */
@@ -152,17 +146,17 @@ body {
     color: var(--primary-color);
 }
 
-
-/* ---------------------appartment-------------------------------------- */
+/* Appartment Section--------------------------------------------------------------------- */
 .Appartment-details {
-    height: 50vh;
+    height: 54vh;
     background-color: rgba(246, 254, 255, 0.856);
     display: flex;
     flex-direction: row;
 }
 
-.Appartment-details .Appartment, .Flats {
-    width: 50%; /* Adjust as needed */
+.Appartment-details .Appartment,
+.Flats {
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,157 +176,438 @@ body {
     text-align: center;
 }
 
-.Appartment-details .Appartment .ImagesAp, .Flats .ImagesAp {
+.Appartment-details .Appartment .ImagesAp,
+.Flats .ImagesAp {
     display: flex;
-    overflow-x: hidden; /* Hide scrollbar */
+    overflow-x: hidden;
     width: 100%;
-    gap: 0; /* No extra space between images */
-    white-space: nowrap; /* Prevent images from wrapping */
-    scroll-behavior: smooth; /* Smooth scrolling */
+    gap: 0;
+    white-space: nowrap;
+    scroll-behavior: smooth;
 }
 
-.Appartment-details .Appartment .ImagesAp img, .Flats .ImagesAp img {
-    width: 100%; /* Ensure images take full container width */
-    height: 100%; /* Ensure images take full container height */
-    object-fit: cover; /* Cover the container without distortion */
-    flex-shrink: 0; /* Prevent images from shrinking */
+.Appartment-details .Appartment .ImagesAp img,
+.Flats .ImagesAp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+.fa-whatsapp {
+    position: fixed;
+    color: rgb(255, 255, 255);
+    background-color: green;
+    border-radius: 40%;
+    padding: 8px;
+    right: 50px;
+    bottom: 100px;
+    font-size: 50px;
+    cursor: pointer;
+}
 
-    /* Adjust homeBack section for mobile */
-    .homeBack {
-        height: 100vh;
-        top: 0;
-        padding: 10px;
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
     }
 
-    .headings {
-        padding: 20px;
-        text-align: justify;
+    20% {
+        transform: translateX(-10px);
+    }
+
+    40% {
+        transform: translateX(10px);
+    }
+
+    60% {
+        transform: translateX(-10px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Infrastructure Section */
+.Infrastructure div>p {
+    color: whitesmoke;
+}
+
+.Infrastructure .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Infrastructure div>h1 {
+    color: whitesmoke;
+    font-size: 60px;
+}
+
+.Infrastructure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.Infrastructure .First-Infra {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    gap: 100px;
+    color: whitesmoke;
+}
+
+.Infrastructure .First-Infra div {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 350px;
+    transition: 0.4s ease-in-out;
+    height: 200px;
+}
+
+.Infrastructure .First-Infra div:hover {
+    transform: translateY(-10px);
+}
+
+.Infrastructure .First-Infra div i {
+    font-size: 40px;
+}
+
+.Infrastructure .First-Infra div h4 {
+    font-size: 40px;
+}
+
+/* Plans Section */
+.app-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    width: 100vw;
+    padding: 40px;
+    position: relative;
+}
+
+.gallery {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100vw;
+}
+
+.gallery-section {
+    display: flex;
+    min-width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image-container {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-container .PlanA {
+    text-align: justify;
+}
+
+.PlanA h1 {
+    margin-bottom: 20px;
+}
+
+.Apart,
+.Flatsw {
+    font-size: 50px;
+    margin-bottom: 40px;
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+}
+
+.image-container img {
+    max-width: 50%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    position: absolute;
+    bottom: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    z-index: 1;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10%;
+    border: 2px solid var(--primary-color);
+}
+
+button:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+/* Latest News Section */
+.Latest-News .heading h1 {
+    text-align: center;
+    color: white;
+    margin: 20px 0px;
+}
+
+.Latest-News {
+    padding: 20px;
+}
+
+.NewsAbout {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.NewsAbout .NewsDiv {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 20px;
+}
+
+.NewsAbout .NewsDiv img {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.NewsAbout .NewsDiv h2 {
+    color: var(--primary-color);
+    width: 450px;
+    margin: 20px 0px;
+}
+
+.NewsAbout .NewsDiv p {
+    font-weight: 600;
+    text-align: justify;
+}
+
+.NewsAbout .NewsDiv h5 {
+    font-weight: 400;
+}
+
+/* ----------------- Responsive Design ------------------ */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+
+    .projects-Appartment,
+    .Appartment-details {
+        flex-direction: column;
+    }
+
+    .projects-Appartment div,
+    .Appartment-details .Appartment,
+    .Appartment-details .Flats {
+        width: 100%;
     }
 
     .homeBack h1 {
-        font-size: 28px;
-        text-align: justify;
-    }
-
-    .homeBack p {
-        font-size: 16px;
-        text-align: justify;
-    }
-
-    /* Adjust Button Styles for Mobile */
-    .headings button {
-        width: 60%;
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    /* Adjust Projects Section for mobile */
-    .projects-Appartment {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        width: 100vw;
-        /* Full width for mobile */
-    }
-
-    .projects-Appartment .image {
-        width: 90%;
-        height: 300px;
-    }
-
-    .projects-Appartment .heading {
-        padding: 20px;
-        text-align: justify;
-        width: 100vw;
+        font-size: 35px;
     }
 
     .heading h1 {
-        font-size: 20px;
+        font-size: 40px;
     }
 
-    .heading h4 {
-        font-size: 22px;
-    }
-
-    .heading p {
-        font-size: 16px;
-        text-align: justify;
-    }
-
-    /* Adjust Button in Projects Section for Mobile */
-    .heading button {
-        width: 50%;
-        font-size: 16px;
-        padding: 10px;
+    .heading button,
+    .controls button {
+        width: 30%;
     }
 }
 
-@media (max-width: 480px) {
-
-    /* Further adjust Button Styles for very small screens */
-    .headings button {
-        width: 40%;
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
+/* For Mobile Devices */
+@media (max-width: 768px) {
     .homeBack {
-        top: 100px;
-    }
-
-    .headings button:hover {
-        color: white;
-        border: 2px solid white;
-    }
-
-    /* Further adjust Projects Section for very small screens */
-    .projects-Appartment .image {
+        top: 80px;
+        height: 60vh;
         width: 100%;
-        height: 250px;
-    }
-
-    .heading {
-        width: 100vw;
-        margin-top: -20px;
-    }
-
-    .heading h1 {
-        font-size: 28px;
-    }
-
-    .heading h4 {
-        font-size: 20px;
-    }
-
-    .heading p {
-        font-size: 14px;
-        text-align: justify;
-    }
-
-    /* Further adjust Button in Projects Section for very small screens */
-    .heading button {
-        width: 40%;
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .Projects {
-        margin-top: 0;
-    }
-
-    .Projects h1 {
-        font-size: 25px;
     }
 
     .homeBack p {
-        width: auto;
+        width: 300px;
+    }
+
+    .image-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .homeBack h1 {
+        font-size: 30px;
     }
 
     .headings {
-        margin-top: -40px;
+        margin-left: 0;
+        padding: 10px;
+        text-align: center;
     }
+
+    .headings button {
+        width: 40%;
+        font-size: 14px;
+    }
+
+    .projects-Appartment,
+    .Appartment-details {
+        flex-direction: column;
+    }
+
+    .projects-Appartment div,
+    .Appartment-details .Appartment,
+    .Appartment-details .Flats {
+        width: 100%;
+    }
+
+    .projects-Appartment .heading,
+    .heading {
+        padding: 10px 20px;
+    }
+
+    .heading h1 {
+        font-size: 30px;
+    }
+
+    .Infrastructure .First-Infra {
+        flex-direction: column;
+    }
+
+    .Infrastructure .First-Infra div {
+        width: 300px;
+        height: 150px;
+    }
+
+    .Infrastructure .First-Infra div h4 {
+        font-size: 24px;
+    }
+
+    .Infrastructure .First-Infra div i {
+        font-size: 30px;
+    }
+
+    .PlanA h1,
+    .Apart,
+    .Flatsw {
+        font-size: 24px;
+    }
+
+    .NewsAbout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .NewsAbout .NewsDiv {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .NewsAbout .NewsDiv img {
+        width: 100%;
+        height: auto;
+    }
+
+    .controls button {
+        padding: 4px 4px;
+        font-size: 12px;
+        width: 10%;
+    }
+
+    .controls {
+        width: 106vw;
+    }
+
+    .controls .btn-left {
+        position: relative;
+        left: -68px;
+    }
+
+    .controls .btn-right {
+        position: relative;
+        left: 10px;
+    }
+
+    .fa-whatsapp {
+        font-size: 40px;
+        right: 20px;
+        bottom: 50px;
+    }
+
+    .projects-Appartment .image {
+        width: 100%;
+    }
+
+    .Projects h1 {
+        font-size: 30px;
+    }
+
+    .heading button {
+        width: 30%;
+        font-size: 14px;
+    }
+
+    .Appartment-details {
+        height: auto;
+    }
+
+    .Appartment-details .Appartment .ImagesAp img {
+        height: 200px;
+    }
+
+    .Infrastructure div>h1 {
+        font-size: 35px;
+    }
+
+    .Infrastructure div>p {
+        font-size: 15px;
+    }
+
+
 }

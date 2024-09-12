@@ -37,12 +37,14 @@
     flex-direction: column;
     margin-top: 40px;
     align-items: center;
+    background-color: var(--primary-color);
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .Details button {
     width: 200px;
     padding: 10px;
-    border-radius: 10px;
     border: none;
     color: var(--primary-color);
 }
@@ -52,7 +54,6 @@
 }
 .Details .Name input{
     width: 300px;
-    border-radius: 10px;
     padding: 10px;
     margin: 4px;
     font-size: 18px;
@@ -61,7 +62,6 @@
 }
 .Details .Email input{
     width: 600px;
-    border-radius: 10px;
     padding: 10px;
     outline: none;
     border: none;
@@ -70,7 +70,6 @@
 .Details textarea{
     width: 600px;
     height: 300px;
-    border-radius: 10px;
     padding: 10px;
     outline: none;
     border: none;
@@ -78,11 +77,11 @@
 }
 .Details button{
    font-size: 20px;
-   background-color: var(--primary-color);
-   border: 2px solid var(--primary-color);
-   color: white;
+   background-color: whitesmoke;
+   border: 2px solid whitesmoke;
+   color: var(--primary-color);
    &:hover{
-     background-color: white;
-     color: black;
+     background-color: var(--primary-color);
+     color: rgb(255, 255, 255);
    }
 }

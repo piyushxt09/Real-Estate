@@ -1,0 +1,97 @@
+.Appartments-container {
+    position: relative;
+    top: 150px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add padding if necessary */
+    padding: 20px;
+}
+
+.Appartments-container::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/Images/Apartment-containerBack.jpeg') center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.8;
+    /* Optional: to add transparency to the background */
+}
+
+.Appartments-container h1 {
+    color: whitesmoke;
+    letter-spacing: 8px;
+    font-size: 50px;
+    padding: 20px;
+    z-index: 1;
+    /* Ensures the h1 is above the background */
+    font-size: 2.5em;
+    /* Adjust the font size as needed */
+}
+
+.ApartmentPhotos {
+    margin-top: 180px;
+    height: 80vh;
+    border-radius: 10px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    grid-template-columns: repeat(2, 1fr);
+    width: 70vw;
+    gap: 50px;
+    background-color: whitesmoke;
+}
+
+/* Hide the scrollbar but keep scrolling functionality */
+.ApartmentPhotos::-webkit-scrollbar {
+    display: none;
+}
+
+.ApartmentPhotos {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.ApartmentPhotos .Photos {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.ApartmentPhotos .Photos>img {
+    width: 450px;
+    height: 250px;
+    text-align: center;
+    max-width: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the given area without distortion */
+    object-position: center;
+    filter: brightness(1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+/* Hover effect to lighten the image */
+.ApartmentPhotos .Photos>img:hover {
+    cursor: pointer;
+    filter: brightness(0.7);
+    /* Lightens the image */
+    background-color: rgba(194, 194, 194, 0.5);
+    /* Optional: Overlay a light background color */
+}
+
+
+.ApartmentPhotos .Photos div>div {
+    margin-top: 30px;
+}

@@ -1,0 +1,147 @@
+/* Container for the whole service section */
+.Services {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Background section with a background image */
+.Services-component {
+    position: relative;
+    top: 150px;
+    height: 30vh;
+    overflow: hidden;
+}
+
+/* Pseudo-element for the background image */
+.Services-component::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/Images/backgroundService.jpeg'); /* Update the path if necessary */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repetition of the background image */
+    z-index: -1; /* Place the background image behind other content */
+    opacity: 0.5; /* Adjust opacity if needed */
+}
+
+/* Centered service text */
+.Service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.Services-component .Service h2 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 60px;
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+    letter-spacing: 6px;
+}
+
+/* Container for middle components */
+.Middle-Components {
+    background-color: rgb(238, 238, 238);
+    height: auto; /* Adjust height to auto to accommodate content */
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Flex container for the first and second rows */
+.Middle-Components .first,
+.Middle-Components .Second {
+    width: 100%; /* Make the flex containers full width of the parent */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around;
+    gap: 10px;
+}
+
+/* Flex items in the first and second rows */
+.Middle-Components .first > div,
+.Middle-Components .Second > div {
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+    height: auto; /* Allow height to adjust based on content */
+    background-color: rgb(19, 93, 190);
+    border-radius: 10px;
+    height: 200px;
+    flex: 1; /* Allow items to grow and shrink as needed */
+    max-width: 800px; /* Ensure items do not grow too wide */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 10px; /* Add margin for spacing between items */
+}
+
+/* Optional: Styling for headings within the divs */
+.Middle-Components .first div h1,
+.Middle-Components .Second div h1 {
+    margin: 0;
+    font-size: 35px; /* Adjust as needed */
+    color: white;
+}
+
+/* Paragraph styling */
+.Middle-Components p {
+    width: auto; /* Adjust width to fit content */
+    color: white;
+    max-width: 600px;
+    margin-top: 20px; /* Reduced margin for better spacing */
+    font-size: 18px; /* Adjust font size for readability */
+}
+
+/* Hover effects for flex items */
+.Middle-Components .first > div:hover,
+.Middle-Components .Second > div:hover {
+    cursor: pointer;
+    transform: translateY(-7px);
+}
+
+/* Responsive styles for devices with a max width of 768px (tablets and mobile devices) */
+@media (max-width: 768px) {
+    .Services-component .Service h2 {
+        font-size: 40px; /* Smaller font size for tablets */
+    }
+
+    .Middle-Components .first > div,
+    .Middle-Components .Second > div {
+        max-width: 100%; /* Make items full width on small screens */
+    }
+
+    p {
+        font-size: 14px; /* Smaller font size for paragraphs */
+    }
+}
+
+/* Responsive styles for devices with a max width of 480px (small mobile devices) */
+@media (max-width: 480px) {
+    .Services-component .Service h2 {
+        font-size: 30px; /* Even smaller font size for small screens */
+    }
+
+    .Middle-Components {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .Middle-Components .first > div,
+    .Middle-Components .Second > div {
+        max-width: 100%; /* Full width on small screens */
+        padding: 10px; /* Reduced padding */
+    }
+
+    p {
+        font-size: 12px; /* Smaller font size for small screens */
+    }
+}

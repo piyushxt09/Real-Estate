@@ -1,0 +1,81 @@
+.Schdule-Heading {
+    position: relative;
+    top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+    color: whitesmoke;
+}
+
+.Schdule-Heading h1 {
+    letter-spacing: 4px;
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.Schdule-Heading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/Images/Schduleback.jpeg');
+    /* Update the path if necessary */
+    background-size: cover;
+    /* Cover the entire area */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Prevent repetition of the background image */
+    z-index: -1;
+    /* Place the background image behind other content */
+    opacity: 0.6;
+    /* Adjust opacity if needed */
+}
+
+.ScheduleAll #schedule-search {
+    margin-top: 300px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    display: flex;
+    gap: 100px;
+    align-items: baseline;
+    background-color: rgb(236, 236, 236);
+    justify-content: center;
+}
+
+.ScheduleAll #schedule-search .Dates {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.ScheduleAll #schedule-search .Dates p {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.ScheduleAll #schedule-search button {
+    padding: 10px;
+    width: 10%;
+    color: white;
+    border: 2px solid var(--primary-color);
+    outline: none;
+    background-color: var(--primary-color);
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--primary-color);
+
+    }
+}
+
+.ScheduleAll #schedule-search .Dates div {
+    font-size: 20px;
+}

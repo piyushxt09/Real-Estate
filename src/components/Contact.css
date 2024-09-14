@@ -49,10 +49,11 @@
     color: var(--primary-color);
 }
 
-.Details span{
+.Details span {
     padding: 10px;
 }
-.Details .Name input{
+
+.Details .Name input {
     width: 300px;
     padding: 10px;
     margin: 4px;
@@ -60,14 +61,16 @@
     outline: none;
     border: none;
 }
-.Details .Email input{
+
+.Details .Email input {
     width: 600px;
     padding: 10px;
     outline: none;
     border: none;
     font-size: 18px;
 }
-.Details textarea{
+
+.Details textarea {
     width: 600px;
     height: 300px;
     padding: 10px;
@@ -75,13 +78,53 @@
     border: none;
     font-size: 20px;
 }
-.Details button{
-   font-size: 20px;
-   background-color: whitesmoke;
-   border: 2px solid whitesmoke;
-   color: var(--primary-color);
-   &:hover{
-     background-color: var(--primary-color);
-     color: rgb(255, 255, 255);
-   }
+
+.Details button {
+    font-size: 20px;
+    background-color: whitesmoke;
+    border: 2px solid whitesmoke;
+    color: var(--primary-color);
+
+    &:hover {
+        background-color: var(--primary-color);
+        color: rgb(255, 255, 255);
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .Contact-Us {
+        top: 140px;
+        height: auto;
+    }
+    .Details{
+        background-color: transparent;
+    }
+
+    .Details .Name input {
+        width: 380px;
+        padding: 20px;
+        margin: 10px;
+        font-size: 18px;
+        outline: none;
+        border: none;
+    }
+
+    .Details .Email input {
+        width: 380px;
+        padding: 20px;
+        outline: none;
+        border: none;
+        font-size: 18px;
+    }
+
+    .Details textarea {
+        width: 380px;
+        height: 300px;
+        padding: 10px;
+        outline: none;
+        border: none;
+        font-size: 20px;
+    }
+
 }

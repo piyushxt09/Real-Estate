@@ -1,0 +1,61 @@
+.PropertyListing {
+    background-color: whitesmoke;
+    position: relative;
+    top: 150px;
+    z-index: 1;
+    /* Updated to avoid issues with layering */
+    height: 84vh;
+    /* Height should be sufficient for the scroll to take effect */
+    overflow-y: auto;
+    /* Enables vertical scrolling if content exceeds height */
+    padding: 20px;
+    /* Optional padding for better look */
+}
+
+.PropertyListing h1 {
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.PropertyListing .Listing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns grid */
+    gap: 30px;
+}
+
+.PropertyListing .Listing li {
+    list-style: none;
+    padding: 10px;
+    background-color: white;
+    /* Makes each item stand out */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for better aesthetics */
+    transition: transform 0.3s ease-in-out;
+}
+
+.PropertyListing .Listing li:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+.PropertyListing .Listing img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.PropertyListing .Listing img:hover {
+    filter: brightness(0.8);
+    /* Subtle brightness effect on hover */
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .PropertyListing .Listing {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: -20px;
+    }
+    
+
+}

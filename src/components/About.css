@@ -4,7 +4,8 @@
     position: relative;
     top: 110px;
 }
-.About{
+
+.About {
     background-color: whitesmoke;
     padding: 20px;
     height: 80vh;
@@ -12,21 +13,26 @@
     justify-content: space-around;
     align-items: center;
 }
-.About .aboutWritten{
+
+.About .aboutWritten {
     width: 50%;
 }
-.About-section h1{
+
+.About-section h1 {
     font-size: 50px;
 }
-.About-section p{
+
+.About-section p {
     font-size: 22px;
 }
-.aboutWritten{
+
+.aboutWritten {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.AboutImage{
+
+.AboutImage {
     background-image: url('../assets/Images/AboutPhoto.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,4 +40,37 @@
     width: 500px;
     height: 500px;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .About {
+        flex-direction: column-reverse;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+
+    .AboutImage {
+        width: 300px;
+        height: 300px;
+    }
+
+    .About-section h1 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .About-section {
+        height: auto;
+        padding: 20px;
+    }
+
+    .About-section p {
+        font-size: 14px;
+    }
+
+    .About .aboutWritten {
+        width: 100%;
+    }
 }

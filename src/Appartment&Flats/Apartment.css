@@ -95,3 +95,33 @@
 .ApartmentPhotos .Photos div>div {
     margin-top: 30px;
 }
+
+
+@media screen and (max-width: 500px) {
+    .FlatContent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .FlatContent .ApartmentPhotos {
+        margin-top: 180px;
+        border-radius: 10px;
+        height: auto;
+        padding: 40px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        overflow-y: hidden;
+        flex-direction: column;
+        width: 100vw;
+    }
+    .Photo{
+        position: relative;
+        left: 50px;
+    }
+    .FlatContent .ApartmentPhotos .Photos {
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}

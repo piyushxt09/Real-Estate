@@ -79,3 +79,23 @@
 .ScheduleAll #schedule-search .Dates div {
     font-size: 20px;
 }
+
+
+@media screen and (max-width: 500px) {
+    .ScheduleAll #schedule-search {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .ScheduleAll #schedule-search button {
+        width: 50%;
+    }
+
+    .ScheduleAll #schedule-search .Dates {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+}

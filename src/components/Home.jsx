@@ -1,6 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import NotificationPopup from './Notification';
+
 import './Home.css'
 import Appartment1 from '../assets/Images/Apartment1.jpeg';
 import Appartment2 from '../assets/Images/Apartment2.jpeg';
@@ -25,6 +27,7 @@ const Home = () => {
 
   const navigate = useNavigate();
 
+  const [showNotification, setShowNotification] = useState(false);
   const appartmentScrollRef = useRef(null);
   const flatsScrollRef = useRef(null);
 
@@ -91,6 +94,29 @@ const Home = () => {
       behavior: "smooth",
     });
   };
+
+
+
+  useEffect(() => {
+    // Timer to show the notification after 2 minutes
+    const timer = setTimeout(() => {
+      setShowNotification(true);
+    }, 2000); // 120000ms = 2 minutes
+
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, []);
+
+  // Handle closing the notification popup
+  const handleIgnore = () => {
+    setShowNotification(false);
+
+    // Reset the notification to show again after 2 minutes if desired
+    setTimeout(() => {
+      setShowNotification(true);
+    }, 60000);
+  };
+
+
 
   return (
     <>
@@ -307,6 +333,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {showNotification && (
+        <NotificationPopup onClose={handleIgnore} />
+      )}
     </>
   )
 }

@@ -21,7 +21,7 @@ const Schedule = () => {
 
 
     const years = [];
-    for (let i = 2000; i <= new Date().getFullYear(); i++) {
+    for (let i = 2024; i <= new Date().getFullYear(); i++) {
         years.push(i);
     }
 
@@ -31,7 +31,11 @@ const Schedule = () => {
         e.preventDefault();
         console.log('Search button clicked!');
         console.log(`Date: ${date}, Month: ${month}, Year: ${year}`);
-        setMessage('We will contact you soon.');
+        setMessage(`Thank you, We will contact you soon...`);
+
+        setTimeout(() => {
+            setMessage('')
+        }, 10000)
     };
 
     return (
@@ -83,7 +87,7 @@ const Schedule = () => {
                 </div>
                 <button onClick={handleSearch}>Visit Now</button>
             </form>
-            {message && <p className='contact-message' style={{ color: 'White', textAlign: 'center', fontSize: '25px', marginTop: '50px' }}>{message}</p>}
+            {message && <p className='contact-message'>{message}</p>}
         </div>
     )
 }

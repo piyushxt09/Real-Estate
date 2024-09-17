@@ -1,61 +1,108 @@
-.PropertyListing {
-    background-color: whitesmoke;
+.Property-listing {
     position: relative;
     top: 150px;
-    z-index: 1;
-    /* Updated to avoid issues with layering */
-    height: 84vh;
-    /* Height should be sufficient for the scroll to take effect */
-    overflow-y: auto;
-    /* Enables vertical scrolling if content exceeds height */
-    padding: 20px;
-    /* Optional padding for better look */
-}
-
-.PropertyListing h1 {
-    text-align: center;
-    margin: 30px 0px;
-}
-
-.PropertyListing .Listing {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 columns grid */
-    gap: 30px;
-}
-
-.PropertyListing .Listing li {
-    list-style: none;
-    padding: 10px;
     background-color: white;
-    /* Makes each item stand out */
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for better aesthetics */
-    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.PropertyListing .Listing li:hover {
-    transform: scale(1.05);
-    /* Slight zoom effect on hover */
+.Photos {
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.PropertyListing .Listing img {
+.image-container {
+    position: relative;
     width: 100%;
-    border-radius: 5px;
+    max-width: 600px;
+    border-radius: 4px;
+    /* Limits the width to 600px */
 }
 
-.PropertyListing .Listing img:hover {
-    filter: brightness(0.8);
-    /* Subtle brightness effect on hover */
+.image-container img {
+    width: 100%;
+    /* Responsive width */
+    border-radius: 4px;
+    max-width: 100%;
+    /* Ensures the image doesn’t exceed the container's width */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.image-container:hover img {
+    filter: brightness(0.6);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 8px;
+    transition: opacity 0.4s;
+    pointer-events: none;
+    /* Make the overlay non-blocking for clicks */
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    text-align: center;
+    pointer-events: auto;
+ 
+    /* Allow clicking on text inside overlay */
+}
+
+.overlay-text h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.overlay-text p {
+    margin: 5px 0 0;
+    font-size: 18px;
+}
+
+.Photos img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
     cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
-    .PropertyListing .Listing {
-        grid-template-columns: repeat(1, 1fr);
-        margin-left: -20px;
-    }
-    
+.Photos img:hover {
+    filter: brightness(0.6);
+}
 
+.Property-listing h1 {
+    margin: 10px 0px;
+    font-size: 50px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+.Property-listing .flats1,
+.flats2,
+.flats3,
+.flats4 {
+    background-color: rgb(238, 238, 238);
+    padding: 10px;
 }

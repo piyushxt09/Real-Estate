@@ -99,3 +99,11 @@
         justify-content: start;
     }
 }
+
+.contact-message {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    margin: 50px auto ;
+    width: 50vh;
+}

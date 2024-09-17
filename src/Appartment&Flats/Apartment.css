@@ -9,6 +9,10 @@
     padding: 20px;
 }
 
+.FlatContent{
+    margin-bottom: 10px;
+}
+
 .Appartments-container::before {
     position: absolute;
     content: '';
@@ -115,10 +119,12 @@
         flex-direction: column;
         width: 100vw;
     }
-    .Photo{
+
+    .Photo {
         position: relative;
         left: 50px;
     }
+
     .FlatContent .ApartmentPhotos .Photos {
         align-items: center;
         justify-content: center;

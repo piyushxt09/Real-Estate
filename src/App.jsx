@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 import PropertyListing from './components/PropertyListing';
 import Schedule from './components/Schdule';
-import Apartment from './Appartment&Flats/Apartment';
 import Flat from './Appartment&Flats/Flat';
 import Flats from './FlatsInformation/Flats';
 
@@ -21,7 +20,6 @@ function App() {
         <Route path="/PropertyListing" element={<> <Navbar /><PropertyListing /></>} />
         <Route path="/PropertyListing/:id" element={<Flats />} />
         <Route path="/Schedule" element={<> <Navbar /><Schedule /> <Footer /> </>} />
-        <Route path="/apartments" element={<> <Navbar /><Apartment /> <Footer /> </>} />
         <Route path="/flats" element={<> <Navbar /> <Flat /> <Footer /> </>} />
       </Routes>
     </Router>

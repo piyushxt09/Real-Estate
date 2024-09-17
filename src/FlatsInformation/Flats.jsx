@@ -96,6 +96,34 @@ import bhk2 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA00
 import bhk3 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0106.jpg';
 import bhk4 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0004.jpg';
 
+import bhk4021 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0025.jpg'
+import bhk422 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0026.jpg'
+import bhk423 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0027.jpg'
+import bhk424 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0028.jpg'
+import bhk425 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0029.jpg'
+import bhk426 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0030.jpg'
+import bhk427 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0031.jpg'
+import bhk428 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0032.jpg'
+import bhk429 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0033.jpg'
+import bhk4210 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0034.jpg'
+import bhk4211 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0035.jpg'
+import bhk4212 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0036.jpg'
+import bhk4213 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0037.jpg'
+import bhk4214 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0038.jpg'
+import bhk4215 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0039.jpg'
+import bhk4216 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0040.jpg'
+import bhk4217 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0041.jpg'
+import bhk4218 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0042.jpg'
+import bhk4219 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0043.jpg'
+import bhk4220 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0044.jpg'
+import bhk4221 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0045.jpg'
+import bhk4222 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0046.jpg'
+import bhk4223 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0047.jpg'
+import bhk4224 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0048.jpg'
+import bhk4225 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0049.jpg'
+import bhk4226 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0050.jpg'
+import bhk4227 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0051.jpg'
+
 const Flats = () => {
     const { id } = useParams();
     console.log("Current ID:", id);

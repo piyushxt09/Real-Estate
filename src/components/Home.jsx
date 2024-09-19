@@ -110,8 +110,8 @@ const Home = () => {
     <>
       <i class="fa-brands fa-whatsapp"></i>
       {/* -----------------------------home page ------------------------------------ */}
-      <div className="homeBack">
-        <div className='headings'>
+      <div className="homeBack" style={{alignItems: 'start'}}>
+        <div className='headings' style={{textAlign: 'left'}}>
           <h1>
             The Leading Luxury
             <br />

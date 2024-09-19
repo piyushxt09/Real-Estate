@@ -1,61 +1,96 @@
+:root {
+    --primary-color: rgb(8, 61, 129);
+    --white-color: #fff;
+}
+
+.Footer {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 60vh; /* Adjust to ensure the footer isn't too large on very small screens */
+}
+
 .Footer .Upper {
     display: flex;
     justify-content: space-around;
     background-color: whitesmoke;
-    padding: 5px;
+    color: var(--primary-color);
+    padding: 10px 0;
+    width: 100%;
+    max-width: 1200px; /* Constrain the width */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .Footer .Upper div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin: 10px;
 }
 
 .Footer .Upper div i {
-    margin-top: 8px;
-    border: 2px solid rgb(0, 0, 0);
+    margin: 10px 0;
+    border: 2px solid var(--primary-color);
     padding: 10px;
     font-size: 20px;
     border-radius: 50%;
+    color: var(--primary-color);
 }
 
 .Footer .Upper div p {
     font-size: 16px;
+    text-align: center;
+    margin: 5px 0;
 }
 
 .Footer .Middle {
     display: flex;
-    justify-content: space-around;
-    color: whitesmoke;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1200px; /* Constrain the width */
+    gap: 20px;
+}
+
+.Footer .Middle > div {
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis for responsiveness */
+    margin: 10px;
 }
 
 .Footer .Middle h1 {
     font-size: 25px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .Footer .Middle input {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 35px;
     padding: 4px;
     font-size: 16px;
     outline: none;
     border: 1px solid white;
+    border-radius: 5px;
 }
 
 .Footer .Middle button {
-    font-size: 14px;
-    outline: none;
+    font-size: 16px;
+    padding: 8px 16px;
     border: 2px solid white;
     background-color: white;
-    transition: 0.4s;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.4s, color 0.4s;
+}
 
-    &:hover {
-        background-color: transparent;
-        color: white;
-    }
+.Footer .Middle button:hover {
+    background-color: transparent;
+    color: white;
 }
 
 .Footer .Middle h6 {
@@ -66,57 +101,109 @@
 
 .Footer .Middle p {
     cursor: pointer;
+    transition: text-decoration 0.3s;
+}
 
-    &:hover {
-        text-decoration: underline;
+.Footer .Middle p:hover {
+    text-decoration: underline;
+}
+
+.Footer .Upper div .Location {
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .Footer .Upper {
+        flex-direction: column;
+        align-items: center;
     }
-}
 
-.Footer .Middle div div {
-    display: flex;
-    gap: 10px;
-}
+    .Footer .Middle {
+        flex-direction: column;
+        align-items: center;
+    }
 
-
-@media (max-width: 768px) {
     .Footer .Middle input {
-        width: 200px;
+        max-width: 250px;
     }
 
     .Footer .Middle button {
-        padding: 2px;
+        padding: 6px 12px;
+        font-size: 14px;
+    }
 
+    .Footer .Middle h1 {
+        font-size: 22px;
+    }
+
+    .Footer .Upper div i {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .Footer .Upper div p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Footer .Upper {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .Footer .Middle {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .Footer .Middle input {
+        max-width: 200px;
+    }
+
+    .Footer .Middle button {
+        padding: 6px 12px;
+        font-size: 14px;
     }
 
     .Footer .Middle h1 {
         font-size: 20px;
     }
 
-    .Footer .Upper div {
-        gap: 20px;
+    .Footer .Upper div i {
+        font-size: 16px;
+        padding: 8px;
     }
 
-    .InputField div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .Footer .Upper div p {
+        font-size: 12px;
     }
 
-    .InputField div button {
-        font-size: 14px;
+    .Footer .Upper div .Location {
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+    .Footer .Middle input {
+        max-width: 150px;
     }
 
-    .Footer .Middle {
-        gap: 26px;
-        padding: 24px;
+    .Footer .Middle button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .Footer .Middle h1 {
+        font-size: 18px;
     }
 
     .Footer .Upper div i {
-        margin-top: 8px;
-        border: 2px solid rgb(0, 0, 0);
-        padding: 8px;
         font-size: 14px;
-        border-radius: 50%;
+        padding: 6px;
     }
 
     .Footer .Upper div p {
@@ -124,12 +211,7 @@
     }
 
     .Footer .Upper div .Location {
-        width: 200px;
-    }
-}
-
-@media (max-width: 500px) {
-    .Footer .Middle input {
-        width: 149px;
+        width: 90%;
+        max-width: 200px;
     }
 }

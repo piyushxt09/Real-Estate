@@ -35,7 +35,8 @@ body {
     justify-content: center;
     height: 100%;
     padding: 20px;
-    text-align: left; /* Text alignment improved */
+    text-align: left;
+    /* Text alignment improved */
 }
 
 .homeBack h1 {
@@ -85,28 +86,27 @@ body {
 
     .headings {
         margin-left: 50px;
+        text-align: left;
     }
 }
 
 @media (max-width: 768px) {
-    .headings {
-        margin-left: 20px;
-        padding: 10px;
-    }
 
     .homeBack h1 {
         font-size: 1.8rem;
-        text-align: center;
+    }
+
+    .headings {
+        text-align: left;
     }
 
     .homeBack p {
         font-size: 0.85rem;
         width: 100%;
-        text-align: center;
     }
 
     .headings button {
-        width: 180px;
+        width: 120px;
         padding: 8px 15px;
         font-size: 0.9rem;
     }
@@ -120,12 +120,14 @@ body {
 
     .homeBack h1 {
         font-size: 1.5rem;
-        text-align: center;
+    }
+
+    .headings {
+        text-align: left;
     }
 
     .homeBack p {
         font-size: 0.8rem;
-        text-align: center;
     }
 
     .headings button {
@@ -391,22 +393,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 30px; /* Add some space between the containers */
+    gap: 30px;
+    /* Add some space between the containers */
     flex-wrap: wrap;
 }
 
 .app-container .Flats-section .image-container {
     display: flex;
-    flex-direction: column; /* Stack image and details vertically */
+    flex-direction: column;
+    /* Stack image and details vertically */
     gap: 20px;
     color: white;
-    max-width: 100%; /* Ensure it doesn't overflow */
+    max-width: 100%;
+    /* Ensure it doesn't overflow */
 }
 
 .app-container .Flats-section .image-container img {
     width: 100%;
-    height: auto; /* Keep aspect ratio */
-    max-width: 800px; /* Limit the maximum width */
+    height: auto;
+    /* Keep aspect ratio */
+    max-width: 800px;
+    /* Limit the maximum width */
     max-height: 400px;
     object-fit: cover;
 }
@@ -519,7 +526,8 @@ hr {
     gap: 40px;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Allows news items to wrap on smaller screens */
+    flex-wrap: wrap;
+    /* Allows news items to wrap on smaller screens */
 }
 
 .NewsAbout .NewsDiv {
@@ -569,6 +577,10 @@ hr {
         gap: 20px;
     }
 
+    .homeBack {
+        margin-top: 10px;
+    }
+
     .NewsAbout .NewsDiv {
         width: 45%;
     }
@@ -586,6 +598,10 @@ hr {
     .NewsAbout {
         flex-direction: column;
         gap: 30px;
+    }
+
+    .homeBack {
+        margin-top: 20px;
     }
 
     .NewsAbout .NewsDiv {
@@ -608,6 +624,10 @@ hr {
 
     .NewsAbout .NewsDiv {
         width: 100%;
+    }
+
+    .homeBack {
+        margin-top: 20px;
     }
 
     .NewsAbout .NewsDiv img {

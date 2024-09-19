@@ -149,15 +149,25 @@ body {
     .close-btn {
         display: block;
     }
+    .Buttons{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        gap: 10px;
+    }
+    .Buttons .schedule-btn{
+        font-size: 12px;
+        width: 100%;
+    }
 }
 
 @media (max-width: 500px) {
     .Logo .LogoImage {
-        width: 90px;
+        width: 100px;
     }
 
     .Logo h2 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .schedule-btn {
@@ -172,5 +182,15 @@ body {
 
     .mobile-menu-btn {
         font-size: 32px;
+    }
+    .Buttons{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        gap: 10px;
+    }
+    .Buttons .schedule-btn{
+        font-size: 12px;
+        width: 100%;
     }
 }

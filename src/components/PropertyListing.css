@@ -9,24 +9,20 @@
 
 .Photos {
     display: grid;
-    gap: 100px;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 400px; /* Reduced gap for smaller screens */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
 }
 
 .image-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
     border-radius: 4px;
-    /* Limits the width to 600px */
+    max-width: 100%;
+    /* Ensure the container doesn't exceed its parent's width */
 }
 
 .image-container img {
-    width: 90%;
-    /* Responsive width */
-    border-radius: 4px;
-    max-width: 100%;
-    /* Ensures the image doesn’t exceed the container's width */
+    width: 100%;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.4s;
@@ -40,17 +36,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: opacity 0.4s;
     pointer-events: none;
-    /* Make the overlay non-blocking for clicks */
 }
 
 .image-container:hover .overlay {
@@ -60,45 +55,27 @@
 .overlay-text {
     color: white;
     text-align: center;
-    pointer-events: auto;
- 
-    /* Allow clicking on text inside overlay */
 }
 
 .overlay-text h3 {
     margin: 0;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .overlay-text p {
     margin: 5px 0 0;
-    font-size: 18px;
-}
-
-.Photos img {
-    width: 90%;
-    max-width: 100%;
-    height: 90%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.4s;
-    cursor: pointer;
-}
-
-.Photos img:hover {
-    filter: brightness(0.6);
+    font-size: 14px;
 }
 
 .Property-listing h1 {
-    margin: 10px 0px;
-    font-size: 30px;
+    margin: 10px 0;
+    font-size: 24px;
     padding: 4px;
     background-color: var(--primary-color);
     color: whitesmoke;
     text-align: center;
 }
-
 
 .Property-listing .flats1,
 .flats2,
@@ -106,4 +83,61 @@
 .flats4 {
     background-color: rgb(238, 238, 238);
     padding: 10px;
+    margin-bottom: 20px; /* Added margin for separation between sections */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    .Property-listing h1 {
+        font-size: 22px;
+    }
+
+    .overlay-text h3 {
+        font-size: 16px;
+    }
+
+    .overlay-text p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Property-listing h1 {
+        font-size: 20px;
+    }
+
+    .Photos {
+        gap: 10px;
+    }
+
+    .overlay-text h3 {
+        font-size: 14px;
+    }
+
+    .overlay-text p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Property-listing {
+        padding: 10px;
+    }
+
+    .Property-listing h1 {
+        font-size: 18px;
+    }
+
+    .Photos {
+        gap: 5px;
+    }
+
+    .overlay-text h3 {
+        font-size: 12px;
+    }
+
+    .overlay-text p {
+        font-size: 8px;
+    }
 }

@@ -109,8 +109,6 @@ const Home = () => {
   return (
     <>
       <i class="fa-brands fa-whatsapp"></i>
-      <marquee behavior="" direction="left-right" >Hello</marquee>
-
       {/* -----------------------------home page ------------------------------------ */}
       <div className="homeBack">
         <div className='headings'>

@@ -37,11 +37,6 @@ import bhk37 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0
 import bhk38 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0101.jpg'
 import bhk39 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0102.jpg'
 import bhk310 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0103.jpg'
-import bhk311 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0104.jpg'
-import bhk312 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0105.jpg'
-import bhk313 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0106.jpg'
-import bhk314 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0107.jpg'
-import bhk315 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0108.jpg'
 
 
 import bhk41 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0004.jpg'
@@ -54,16 +49,7 @@ import bhk47 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0
 import bhk48 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0011.jpg'
 import bhk49 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0012.jpg'
 import bhk410 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0013.jpg'
-import bhk411 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0014.jpg'
-import bhk412 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0015.jpg'
-import bhk413 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0016.jpg'
-import bhk414 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0017.jpg'
-import bhk415 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0018.jpg'
 
-
-import bhk2 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0052.jpg';
-import bhk3 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0106.jpg';
-import bhk4 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0004.jpg';
 
 import bhk421 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0025.jpg'
 import bhk422 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0026.jpg'
@@ -108,7 +94,7 @@ const Flats = () => {
             square: "1100 Sq. Yards",
             information: "2 Balcony | 2 Washroom | 3 Bedroom | Car Parking",
             description: "This 3 BHK flat is located at Dwarka mor, offering a great location with modern interiors.",
-            images: [bhk31, bhk32, bhk33, bhk34, bhk35, bhk36, bhk37, bhk38, bhk39, bhk310, bhk311, bhk312, bhk313, bhk314, bhk315]
+            images: [bhk31, bhk32, bhk33, bhk34, bhk35, bhk36, bhk37, bhk38, bhk39, bhk310]
         },
         "4bhk": {
             title: "4 BHK Flat",
@@ -116,7 +102,7 @@ const Flats = () => {
             square: "1100 Sq. Yards",
             information: "2 Balcony | 2 Washroom | 4 Bedroom | Car Parking",
             description: "This 4 BHK flat is located at Dwarka mor, offering a great location with modern interiors.",
-            images: [bhk41, bhk42, bhk43, bhk44, bhk45, bhk46, bhk47, bhk48, bhk49, bhk410, bhk411, bhk412, bhk413, bhk414, bhk415]
+            images: [bhk41, bhk42, bhk43, bhk44, bhk45, bhk46, bhk47, bhk48, bhk49, bhk410]
         },
         "4bhk1": {
             title: "4 BHK Flat",
@@ -126,6 +112,7 @@ const Flats = () => {
             description: "This 4 BHK flat is located at Dwarka mor, offering a great location with modern interiors.",
             images: [bhk421, bhk422, bhk423, bhk424, bhk425, bhk426, bhk427, bhk428, bhk429, bhk4210, bhk4211, bhk4212, bhk4213, bhk4214, bhk4215]
         }
+
     };
 
     const flat = flatDetails[id];
@@ -206,9 +193,9 @@ const Flats = () => {
             <div className="Most-Likely">
                 <h2>Suggestion for you</h2>
                 <div className='Images'>
-                    <Link to='/PropertyListing/1bhk'><img src={bhk2} alt="" /></Link>
-                    <Link to='/PropertyListing/2bhk'><img src={bhk3} alt="" /></Link>
-                    <Link to='/PropertyListing/3bhk'><img src={bhk4} alt="" /></Link>
+                    <Link to='/PropertyListing/1bhk'><img src={bhk22} alt="" /></Link>
+                    <Link to='/PropertyListing/2bhk'><img src={bhk32} alt="" /></Link>
+                    <Link to='/PropertyListing/3bhk'><img src={bhk42} alt="" /></Link>
                 </div>
             </div>
         </>

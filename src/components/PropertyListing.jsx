@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';  // Import Link for navigation
 import './PropertyListing.css';
 import bhk1 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0084.jpg';
 import bhk2 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0052.jpg';
-import bhk3 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0106.jpg';
-import bhk4 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0004.jpg';
+import bhk3 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0095.jpg';
+import bhk4 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0008.jpg';
 import bhk41 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0026.jpg';
 
 const PropertyListing = () => {

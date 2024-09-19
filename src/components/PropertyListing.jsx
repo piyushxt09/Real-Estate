@@ -80,7 +80,7 @@ const PropertyListing = () => {
                         </div>
                     </div>
                     <div className="image-container">
-                        <Link to="/PropertyListing/4bhk">  {/* Link to the 4 BHK details page */}
+                        <Link to="/PropertyListing/4bhk1">  {/* Link to the 4 BHK details page */}
                             <img src={bhk41} alt="4 BHK Flat" />
                         </Link>
                         <div className="overlay">

@@ -14,22 +14,22 @@
   }
   
   .Notification form div input {
-    min-width: 400px;
+    min-width: 300px;
     max-width: 1000px;
   }
   
   .Notification form div textarea {
     max-width: 1000px;
-    min-width: 400px;
+    min-width: 300px;
   }
   
   /* Styles for the Submit button */
   .submit-button {
     background-color: black;
-    width: 50%;
+    width: 40%;
     padding: 8px;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     margin-top: 20px;

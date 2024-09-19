@@ -7,14 +7,14 @@ const Footer = () => {
             <div className='Upper'>
                 <div>
                     <i className="fa-solid fa-phone"></i>
-                    <p>(+00) 1234 5678</p>
+                    <p>(+91) 7428191134 || 7428191139</p>
                 </div>
                 <div>
                     <i className="fa-solid fa-envelope"></i>
-                    <p>info@gmail.com </p></div>
+                    <p>rschauhanrealtors@gmail.com</p></div>
                 <div>
                     <i className="fa-solid fa-location-dot"></i>
-                    <p className='Location'>  Robert Robertson, 1234 NW Bobcat Lane, St. Robert, MO 65584-5678 </p>
+                    <p className='Location'>18 & 19 Mohan Garden Uttam Nagar, New Delhi 110059 (Near Dwarka Mor).</p>
                 </div>
             </div>
             <div className="Middle">

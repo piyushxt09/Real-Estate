@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Flats.css';
 import bhk11 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0084.jpg';
 import bhk12 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0077.jpg'
@@ -12,13 +13,7 @@ import bhk17 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0
 import bhk18 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0087.jpg'
 import bhk19 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0088.jpg'
 import bhk110 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0089.jpg'
-import bhk111 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0091.jpg'
-import bhk112 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0092.jpg'
-import bhk113 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0111.jpg'
-import bhk114 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0112.jpg'
-import bhk115 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0113.jpg'
-import bhk116 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0114.jpg'
-import bhk117 from '../assets/Images/FlatImages/real estate img4/IMG-20240916-WA0115.jpg'
+
 
 import bhk21 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0024.jpg'
 import bhk22 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0052.jpg'
@@ -30,26 +25,7 @@ import bhk27 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0
 import bhk28 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0058.jpg'
 import bhk29 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0059.jpg'
 import bhk210 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0060.jpg'
-import bhk211 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0061.jpg'
-import bhk212 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0062.jpg'
-import bhk213 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0063.jpg'
-import bhk214 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0064.jpg'
-import bhk215 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0065.jpg'
-import bhk216 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0066.jpg'
-import bhk217 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0067.jpg'
-import bhk218 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0068.jpg'
-import bhk219 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0069.jpg'
-import bhk220 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0070.jpg'
-import bhk221 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0071.jpg'
-import bhk222 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0072.jpg'
-import bhk223 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0073.jpg'
-import bhk224 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0074.jpg'
-import bhk225 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0075.jpg'
-import bhk226 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0076.jpg'
-import bhk227 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0080.jpg'
-import bhk228 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0081.jpg'
-import bhk229 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0085.jpg'
-import bhk230 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0090.jpg'
+
 
 import bhk31 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0094.jpg'
 import bhk32 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0095.jpg'
@@ -66,8 +42,7 @@ import bhk312 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA
 import bhk313 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0106.jpg'
 import bhk314 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0107.jpg'
 import bhk315 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0108.jpg'
-import bhk316 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0109.jpg'
-import bhk317 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0110.jpg'
+
 
 import bhk41 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0004.jpg'
 import bhk42 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0005.jpg'
@@ -84,19 +59,13 @@ import bhk412 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA
 import bhk413 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0016.jpg'
 import bhk414 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0017.jpg'
 import bhk415 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0018.jpg'
-import bhk416 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0019.jpg'
-import bhk417 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0020.jpg'
-import bhk418 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0021.jpg'
-import bhk419 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0022.jpg'
-import bhk420 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0023.jpg'
-import bhk421 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0093.jpg'
 
 
 import bhk2 from '../assets/Images/FlatImages/real estate img3/IMG-20240916-WA0052.jpg';
 import bhk3 from '../assets/Images/FlatImages/real estate img5/IMG-20240916-WA0106.jpg';
 import bhk4 from '../assets/Images/FlatImages/real estate img1/IMG-20240916-WA0004.jpg';
 
-import bhk4021 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0025.jpg'
+import bhk421 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0025.jpg'
 import bhk422 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0026.jpg'
 import bhk423 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0027.jpg'
 import bhk424 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0028.jpg'
@@ -111,22 +80,10 @@ import bhk4212 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-W
 import bhk4213 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0037.jpg'
 import bhk4214 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0038.jpg'
 import bhk4215 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0039.jpg'
-import bhk4216 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0040.jpg'
-import bhk4217 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0041.jpg'
-import bhk4218 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0042.jpg'
-import bhk4219 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0043.jpg'
-import bhk4220 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0044.jpg'
-import bhk4221 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0045.jpg'
-import bhk4222 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0046.jpg'
-import bhk4223 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0047.jpg'
-import bhk4224 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0048.jpg'
-import bhk4225 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0049.jpg'
-import bhk4226 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0050.jpg'
-import bhk4227 from '../assets/Images/FlatImages/real estate img2/IMG-20240916-WA0051.jpg'
+
 
 const Flats = () => {
     const { id } = useParams();
-    console.log("Current ID:", id);
 
     const flatDetails = {
         "1bhk": {
@@ -135,7 +92,7 @@ const Flats = () => {
             square: "500 Sq. Yards",
             information: "1 Balcony | 1 Washroom | 1 Bedroom | Car Parking",
             description: "This is a beautiful 1 BHK flat located Dwarka mor, offering spacious rooms and modern amenities.",
-            images: [bhk11, bhk12, bhk13, bhk14, bhk15, bhk16, bhk17, bhk18, bhk19, bhk110, bhk111, bhk112, bhk113, bhk114, bhk115, bhk116, bhk117]
+            images: [bhk11, bhk12, bhk13, bhk14, bhk15, bhk16, bhk17, bhk18, bhk19, bhk110]
         },
         "2bhk": {
             title: "2 BHK Flat",
@@ -143,7 +100,7 @@ const Flats = () => {
             square: "700 Sq. Yards",
             information: "1 Balcony | 2 Washroom | 2 Bedroom | Car Parking",
             description: "This 2 BHK flat is located at Dwarka mor, offering a great location with modern interiors.",
-            images: [bhk21, bhk22, bhk23, bhk24, bhk25, bhk26, bhk27, bhk28, bhk29, bhk210, bhk211, bhk212, bhk213, bhk214, bhk215, bhk216, bhk217, bhk218, bhk219, bhk220, bhk221, bhk222, bhk223, bhk224, bhk225, bhk226, bhk227, bhk228, bhk229, bhk230] // Add images if available
+            images: [bhk21, bhk22, bhk23, bhk24, bhk25, bhk26, bhk27, bhk28, bhk29, bhk210]
         },
         "3bhk": {
             title: "3 BHK Flat",
@@ -151,7 +108,7 @@ const Flats = () => {
             square: "1100 Sq. Yards",
             information: "2 Balcony | 2 Washroom | 3 Bedroom | Car Parking",
             description: "This 3 BHK flat is located at Dwarka mor, offering a great location with modern interiors.",
-            images: [bhk31, bhk32, bhk33, bhk34, bhk35, bhk36, bhk37, bhk38, bhk39, bhk310, bhk311, bhk312, bhk313, bhk314, bhk315, bhk316, bhk317]
+            images: [bhk31, bhk32, bhk33, bhk34, bhk35, bhk36, bhk37, bhk38, bhk39, bhk310, bhk311, bhk312, bhk313, bhk314, bhk315]
         },
         "4bhk": {
             title: "4 BHK Flat",
@@ -159,19 +116,26 @@ const Flats = () => {
             square: "1100 Sq. Yards",
             information: "2 Balcony | 2 Washroom | 4 Bedroom | Car Parking",
             description: "This 4 BHK flat is located at Dwarka mor, offering a great location with modern interiors.",
-            images: [bhk41, bhk42, bhk43, bhk44, bhk45, bhk46, bhk47, bhk48, bhk49, bhk410, bhk411, bhk412, bhk413, bhk414, bhk415, bhk416, bhk417, bhk418, bhk419, bhk420, bhk421]
+            images: [bhk41, bhk42, bhk43, bhk44, bhk45, bhk46, bhk47, bhk48, bhk49, bhk410, bhk411, bhk412, bhk413, bhk414, bhk415]
+        },
+        "4bhk1": {
+            title: "4 BHK Flat",
+            address: "Dwarka mor, New Delhi-110059",
+            square: "1100 Sq. Yards",
+            information: "2 Balcony | 2 Washroom | 4 Bedroom | Car Parking",
+            description: "This 4 BHK flat is located at Dwarka mor, offering a great location with modern interiors.",
+            images: [bhk421, bhk422, bhk423, bhk424, bhk425, bhk426, bhk427, bhk428, bhk429, bhk4210, bhk4211, bhk4212, bhk4213, bhk4214, bhk4215]
         }
-
     };
 
     const flat = flatDetails[id];
-    console.log("Flat Details:", flat);
 
     if (!flat) {
         return <div>Flat not found!</div>;
     }
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const nextImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % flat.images.length);
@@ -185,7 +149,16 @@ const Flats = () => {
         setCurrentIndex(index);
     };
 
+    const openModal = (index) => {
+        setCurrentIndex(index);
+        setIsModalOpen(true);
+    };
 
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    // Add WhatsApp shake logic
     const whatsappIcon = document.querySelector('.fa-whatsapp');
     function shakeIcon() {
         whatsappIcon.classList.add('shake');
@@ -197,11 +170,11 @@ const Flats = () => {
 
     return (
         <>
-            <i class="fa-brands fa-whatsapp"></i>
+            <i className="fa-brands fa-whatsapp"></i>
             <div className='Flats-info'>
                 <div className="flat-images">
                     <button className="slide-btn prev-btn" onClick={prevImage}>❮</button>
-                    <img src={flat.images[currentIndex]} alt={`Flat ${currentIndex + 1}`} />
+                    <img src={flat.images[currentIndex]} alt={`Flat ${currentIndex + 1}`} onClick={() => openModal(currentIndex)} />
                     <button className="slide-btn next-btn" onClick={nextImage}>❯</button>
                 </div>
                 <div className="dot-container">
@@ -219,17 +192,27 @@ const Flats = () => {
                 <p>{flat.address}</p>
                 <h3>{flat.description}</h3>
             </div>
+
+            {/* Modal for deep view */}
+            {isModalOpen && (
+                <div className="modal" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <span className="close" onClick={closeModal}>&times;</span>
+                        <img src={flat.images[currentIndex]} alt={`Flat ${currentIndex + 1} Full View`} />
+                    </div>
+                </div>
+            )}
+
             <div className="Most-Likely">
                 <h2>Suggestion for you</h2>
                 <div className='Images'>
-                    <img src={bhk2} alt="" />
-                    <img src={bhk3} alt="" />
-                    <img src={bhk4} alt="" />
+                    <Link to='/PropertyListing/1bhk'><img src={bhk2} alt="" /></Link>
+                    <Link to='/PropertyListing/2bhk'><img src={bhk3} alt="" /></Link>
+                    <Link to='/PropertyListing/3bhk'><img src={bhk4} alt="" /></Link>
                 </div>
             </div>
         </>
-
     );
-}
+};
 
 export default Flats;

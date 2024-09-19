@@ -88,7 +88,7 @@ const popupStyles = {
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   zIndex: 1000, // In front of the overlay
   borderRadius: '10px',
-  width: '600px',
+  width: '400px',
   textAlign: 'center',
 };
 

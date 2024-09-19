@@ -10,19 +10,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 }
 
 .Footer .Upper div i {
     margin-top: 8px;
     border: 2px solid rgb(0, 0, 0);
     padding: 10px;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 50%;
 }
 
 .Footer .Upper div p {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .Footer .Middle {
@@ -38,8 +37,8 @@
 }
 
 .Footer .Middle input {
-    width: 400px;
-    height: 40px;
+    width: 300px;
+    height: 35px;
     padding: 4px;
     font-size: 16px;
     outline: none;
@@ -47,7 +46,7 @@
 }
 
 .Footer .Middle button {
-    padding: 6px;
+    font-size: 14px;
     outline: none;
     border: 2px solid white;
     background-color: white;

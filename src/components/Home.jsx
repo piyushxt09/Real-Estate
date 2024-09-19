@@ -4,10 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import NotificationPopup from './Notification';
 
 import './Home.css'
-import Appartment1 from '../assets/Images/Apartment1.jpeg';
-import Appartment2 from '../assets/Images/Apartment2.jpeg';
-import Appartment3 from '../assets/Images/Apartment3.jpeg';
-import Appartment4 from '../assets/Images/Apartment4.jpeg';
 import Flat1 from '../assets/Images/Flat1.jpeg';
 import Flat2 from '../assets/Images/Flat2.jpeg';
 import Flat3 from '../assets/Images/Flat3.jpeg';
@@ -48,27 +44,19 @@ const Home = () => {
   }
 
   useEffect(() => {
-    const scrollAppartment = appartmentScrollRef.current;
     const scrollFlats = flatsScrollRef.current;
     const scrollDuration = 2000; // 2 seconds
 
     const scrollInterval = setInterval(() => {
-      const appartmentWidth = scrollAppartment.scrollWidth / scrollAppartment.children.length;
+
       const flatsWidth = scrollFlats.scrollWidth / scrollFlats.children.length;
 
-      scrollAppartment.scrollBy({
-        left: appartmentWidth,
-        behavior: 'smooth'
-      });
 
       scrollFlats.scrollBy({
         left: flatsWidth,
         behavior: 'smooth'
       });
 
-      if (scrollAppartment.scrollLeft + scrollAppartment.clientWidth >= scrollAppartment.scrollWidth) {
-        scrollAppartment.scrollLeft = 0;
-      }
 
       if (scrollFlats.scrollLeft + scrollFlats.clientWidth >= scrollFlats.scrollWidth) {
         scrollFlats.scrollLeft = 0;
@@ -148,26 +136,17 @@ const Home = () => {
           </div>
           <div className='heading'>
             <h1>Introducing A New <br />  Residential Complex</h1>
-            <h4>Luxury Apartments</h4>
+            <h4>Luxury Flats</h4>
             <p>You are welcome to check out our house  gallery to make sure that all  apartments  are in prime condition which makes them a perfect living space.</p>
             <button>Read more</button>
           </div>
         </div>
       </div>
 
+
       {/* ---------------------------------appartments------------------------------------------- */}
       <div className='Appartments'>
         <div className='Appartment-details'>
-          <div className='Appartment'>
-            <h1>Appartments</h1>
-            <div className='ImagesAp' ref={appartmentScrollRef} onClick={handleClickApartment} style={{ cursor: 'pointer' }}>
-              <img src={Appartment1} alt="Apartment 1" />
-              <img src={Appartment2} alt="Apartment 2" />
-              <img src={Appartment3} alt="Apartment 3" />
-              <img src={Appartment4} alt="Apartment 4" />
-              {/* <img src={Appartment1} alt="Apartment 1" /> */}
-            </div>
-          </div>
           <div className='Flats'>
             <h1>Flats</h1>
             <div className='ImagesAp' ref={flatsScrollRef} onClick={handleClickFlat} style={{ cursor: 'pointer' }}>
@@ -175,100 +154,48 @@ const Home = () => {
               <img src={Flat2} alt="Flat 2" />
               <img src={Flat3} alt="Flat 3" />
               <img src={Flat4} alt="Flat 4" />
-              {/* <img src={Flat1} alt="Flat 1" /> */}
             </div>
           </div>
         </div>
       </div>
+
 
       {/* ----------------------plans---------------------------------------- */}
-
-
       <div className="app-container">
-        <div className="gallery" ref={scrollRef}>
-          {/* First section: Apartments Plans */}
-          <div>
-            <h1 className="Apart">Apartment Plans</h1>
-            <div className="gallery-section">
-              <div className="image-container">
-                <div className="PlanA">
-                  <h1> <u>  Plan A </u></h1>
-                  <p>Bedrooms : 3</p>
-                  <hr />
-                  <p>Bathrooms : 2</p>
-                  <hr />
-                  <p>Area Size : 80.10</p>
-                  <hr />
-                  <p>Garages : 1</p>
-                  <hr />
-                  <p>$ : $35,000/square m</p>
-                </div>
-                <img src={Appartmentmod1} alt="Apartment Plan 1" />
-              </div>
-              <div className="image-container">
-                <div className="PlanA">
-                  <h1> <u>  Plan B </u></h1>
-                  <p>Bedrooms : 3</p>
-                  <hr />
-                  <p>Bathrooms : 2</p>
-                  <hr />
-                  <p>Area Size : 80.10</p>
-                  <hr />
-                  <p>Garages : 1</p>
-                  <hr />
-                  <p>$ : $35,000/square m</p>
-                </div>
-                <img src={Appartmentmod2} alt="Apartment Plan 2" />
-              </div>
+        <h1 className="Flatsw">Flat Plans</h1>
+        <div className='Flats-section'>
+          <div className="image-container">
+            <div className="PlanA">
+              <h1> <u>  Plan A </u></h1>
+              <p>Bedrooms : 3</p>
+              <hr />
+              <p>Bathrooms : 2</p>
+              <hr />
+              <p>Area Size : 80.10</p>
+              <hr />
+              <p>Garages : 1</p>
+              <hr />
+              <p>$ : $35,000/square m</p>
             </div>
+            <img src={Flatmod1} alt="Flat Plan 1" />
           </div>
-
-
-          {/* Second section: Flat Plans */}
-          <div>
-            <h1 className="Flatsw">Flat Plans</h1>
-            <div className="gallery-section">
-              <div className="image-container">
-                <div className="PlanA">
-                  <h1> <u>  Plan A </u></h1>
-                  <p>Bedrooms : 3</p>
-                  <hr />
-                  <p>Bathrooms : 2</p>
-                  <hr />
-                  <p>Area Size : 80.10</p>
-                  <hr />
-                  <p>Garages : 1</p>
-                  <hr />
-                  <p>$ : $35,000/square m</p>
-                </div>
-                <img src={Flatmod1} alt="Flat Plan 1" />
-              </div>
-              <div className="image-container">
-                <div className="PlanA">
-                  <h1> <u>  Plan B </u></h1>
-                  <p>Bedrooms : 3</p>
-                  <hr />
-                  <p>Bathrooms : 2</p>
-                  <hr />
-                  <p>Area Size : 80.10</p>
-                  <hr />
-                  <p>Garages : 1</p>
-                  <hr />
-                  <p>$ : $35,000/square m</p>
-                </div>
-                <img src={Flatmod2} alt="Flat Plan 2" />
-              </div>
+          <div className="image-container">
+            <div className="PlanA">
+              <h1> <u>  Plan B </u></h1>
+              <p>Bedrooms : 3</p>
+              <hr />
+              <p>Bathrooms : 2</p>
+              <hr />
+              <p>Area Size : 80.10</p>
+              <hr />
+              <p>Garages : 1</p>
+              <hr />
+              <p>$ : $35,000/square m</p>
             </div>
+            <img src={Flatmod2} alt="Flat Plan 2" />
           </div>
-        </div>
-
-        {/* Scroll Buttons within app-container */}
-        <div className="controls">
-          <button className='btn-left' onClick={scrollLeft}>◀ </button>
-          <button className='btn-right' onClick={scrollRight}> ▶</button>
         </div>
       </div>
-
 
 
       {/* ----------------------insfrastructure---------------------------- */}

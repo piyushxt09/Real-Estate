@@ -152,6 +152,8 @@ body {
     background-color: rgba(246, 254, 255, 0.856);
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .Appartment-details .Appartment,
@@ -163,6 +165,7 @@ body {
     font-family: "SUSE", sans-serif;
     font-weight: 500;
     padding: 20px;
+    height: 500px;
     font-size: 14px;
 }
 
@@ -238,7 +241,7 @@ body {
 
 /* Infrastructure Section */
 .Infrastructure div>p {
-    color: whitesmoke;
+    color: var(--primary-color);
 }
 
 .Infrastructure .heading {
@@ -249,8 +252,8 @@ body {
 }
 
 .Infrastructure div>h1 {
-    color: whitesmoke;
-    font-size: 60px;
+    color: rgb(2, 2, 2);
+    font-size: 50px;
 }
 
 .Infrastructure {
@@ -259,6 +262,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    background-color: white;
     margin-top: 80px;
 }
 
@@ -284,7 +288,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 10px;
     border-radius: 10px;
-    width: 350px;
+    width: 300px;
     transition: 0.4s ease-in-out;
     height: 200px;
 }
@@ -295,96 +299,52 @@ body {
 
 .Infrastructure .First-Infra div i {
     font-size: 40px;
-}
-
-.Infrastructure .First-Infra div h4 {
-    font-size: 40px;
-}
-
-/* Plans Section */
-.app-container {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background-color: white;
-    width: 100vw;
-    padding: 40px;
-    position: relative;
-}
-
-.gallery {
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    width: 100vw;
-}
-
-.gallery-section {
-    display: flex;
-    min-width: 100vw;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.image-container {
-    margin: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.image-container .PlanA {
-    text-align: justify;
-}
-
-.PlanA h1 {
-    margin-bottom: 20px;
-}
-
-.Apart,
-.Flatsw {
-    font-size: 50px;
-    margin-bottom: 40px;
-    font-family: "Merriweather", serif;
-    font-weight: 500;
-}
-
-.image-container img {
-    max-width: 50%;
-    height: auto;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.controls {
-    position: absolute;
-    bottom: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 80px;
-    z-index: 1;
-}
-
-.controls button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10%;
-    border: 2px solid var(--primary-color);
-}
-
-button:hover {
-    background-color: transparent;
     color: var(--primary-color);
 }
 
-/* Latest News Section */
+.Infrastructure .First-Infra div h4 {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+/* --------------------------------Plans Section------------------------ */
+.app-container .Flatsw {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+.app-container{
+    padding: 20px;
+}
+.app-container .Flats-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.app-container .Flats-section .image-container{
+    display: flex;
+    gap: 50px;
+    color: white;
+}
+.app-container .Flats-section .image-container img{
+    width: 800px;
+    height: 400px;
+}
+.PlanA h1{
+    font-size: 30px;
+}
+hr{
+    color: white;
+    border: 2px solid white;
+}
+
+
+/*----------------------------------------- Latest News Section ------------------------------------*/
 .Latest-News .heading h1 {
     text-align: center;
     color: white;
+    font-size: 35px;
     margin: 20px 0px;
 }
 
@@ -402,7 +362,7 @@ button:hover {
 .NewsAbout .NewsDiv {
     background-color: whitesmoke;
     border-radius: 10px;
-    width: 500px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -412,15 +372,16 @@ button:hover {
 }
 
 .NewsAbout .NewsDiv img {
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
     margin-bottom: 10px;
 }
 
 .NewsAbout .NewsDiv h2 {
     color: var(--primary-color);
-    width: 450px;
-    margin: 20px 0px;
+    width: 380px;
+    font-size: 25px;
+    margin-left: 20px;
 }
 
 .NewsAbout .NewsDiv p {
@@ -430,6 +391,7 @@ button:hover {
 
 .NewsAbout .NewsDiv h5 {
     font-weight: 400;
+    font-size: 16px;
 }
 
 /* ----------------- Responsive Design ------------------ */
